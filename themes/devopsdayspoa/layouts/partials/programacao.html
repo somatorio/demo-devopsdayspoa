@@ -1,0 +1,43 @@
+<div id="programacao" class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}">
+  {{ if not (eq .Site.Params.status_programacao "disponivel") }}
+  <div class="aviso">
+      <h1>{{ .Site.Params.aviso_status_programacao | default "Em breve!" }}</h1>
+  </div>
+  {{ end }}
+  <div class="conteudo container {{ if not (eq .Site.Params.status_programacao "disponivel") }}em-breve{{ end }}">
+    <h2>Programação</h2>
+
+    <hr />
+    <div class="row">
+      <div id="descricoes-palestras" class="pull-right">
+        <div class="collapse in">
+          <h3>Descrições palestras</h3>
+          <p>Clique no nome da palestra para ver a sua descrição.</p>
+        </div>
+        {{ range $index, $element := sort .Site.Data.programacao "hora" }}
+        <div id="{{$index}}" class="collapse">
+          <h3>{{ .atividade }}</h3>
+          {{ if .palestrante }}<p>Palestrante: {{ .palestrante }}</p>{{ end }}
+          <p>{{ .descricao | safeHTML | markdownify }}</p>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="col-lg-6 col-sm-6">
+        <table class="table table-hover">
+          {{ range $index, $element := sort .Site.Data.programacao "hora" }}
+          <tr data-target="#{{$index}}">
+            <td class="hora">
+              {{ .hora }}
+            </td>
+            <td class="evento">
+              {{ .atividade }}
+            </td>
+          </tr>
+          {{ end }}
+        </table>
+      </div>
+
+    </div> <!-- /row -->
+  </div>
+</div> <!-- /#programacao -->

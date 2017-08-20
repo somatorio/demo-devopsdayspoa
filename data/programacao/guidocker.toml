@@ -1,0 +1,10 @@
+hora = "09:40 - 10:00" #hora da atividade
+atividade = "Rodando Aplicações GUI no Docker" #nome da atividade
+#descricao da atividade (aceita html e markdown)
+#para uma descrição em multiplas linhas, abrir e fechar o campo com 3 aspas
+#exemplo:
+#descricao = """blablabla
+#blablabla
+#blablabla"""
+descricao = "Já roda serviços usando containers em Docker? <br>Que tal rodar também as suas aplicações GUI com ele? Isso mesmo, estou falando de rodar seu browser, editor de texto, jogos, enfim…<br>Nesta apresentação serão mostradas vantagens, desvantagens e uma demonstração de uso."
+palestrante = "Marco Antonio Martins Junior (Somatório)" #nome do palestrante

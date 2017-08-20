@@ -1,0 +1,40 @@
+<div id="home" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-caption">
+    {{ if isset .Site.Params "intro_image"}}
+    <img src="img/intro/{{ .Site.Params.intro_image }}">
+    {{ else }}
+    <h1>{{ .Title }}</h1>
+    {{end}}
+  </div>
+  {{ if eq .Site.Params.slider "enable" }}
+  {{ if eq .Site.Params.slider_selector "enable" }}
+  <ol class="carousel-indicators">
+    {{ $arquivos := readDir "static/img/intro/slider" }}
+    {{ range $index, $element := $arquivos }}
+    <li data-target="#home" data-slide-to="{{ $index }}" class="{{ if eq $index 0 }}active{{ end }}"></li>
+    {{ end }}
+  </ol>
+  {{ end }}
+
+  <div class="carousel-inner" role="listbox">
+    {{ $arquivos := readDir "static/img/intro/slider" }}
+    {{ range $index, $element := (shuffle $arquivos) }}
+    <div class="item {{ if eq $index 0 }}active{{ end }}">
+      <img src="img/intro/slider/{{ .Name }}">
+    </div>
+    {{ end }}
+  </div>
+
+  {{ if eq .Site.Params.slider_sidecontrols "enable" }}
+  <a class="left carousel-control" href="#home" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#home" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  {{ end }}
+  {{ end }}
+</div><!-- /.carousel -->

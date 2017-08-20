@@ -1,0 +1,5 @@
+nome = "placeholderprata" #nome do patrocinador
+descricao = "Sua empresa aqui!" #descricao que irá aparecer como texto alternativo da imagem
+link = "" #endereço do site do patrocinador
+categoria = "prata" #categoria do patrocinador (deve ser o mesmo nome do arquivo em data/patrocinio/categorias sem a extensão)
+imagem = "suaempresa.jpg" #imagem da empresa (apenas o nome do arquivo, deve estar em static/img/patrocinio)

@@ -1,0 +1,19 @@
+<footer class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}">
+  <div id="rodape" class="container text-center">
+        <h3>{{ .Site.Title }}</h3>
+        <p>
+          {{ .Site.Params.onde | safeHTML | markdownify }}
+        </p>
+        <p>
+          {{ with .Site.Params.email }}
+          <a href="mailto:{{.}}"><img class="icon" src="img/rodape/icon_email.svg" /></a>
+          {{ end }}
+          {{ with .Site.Params.twitter }}
+          <a href="https://twitter.com/{{.}}"><img class="icon" src="img/rodape/icon_twitter.svg" /></a>
+          {{ end }}
+          {{ with .Site.Params.facebook }}
+          <a href="https://www.facebook.com/{{.}}"><img class="icon" src="img/rodape/icon_facebook.svg" /></a>
+          {{ end }}
+        </p>
+      </div>
+</footer>

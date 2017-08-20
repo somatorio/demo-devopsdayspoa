@@ -1,0 +1,39 @@
+<div id="informacoes" class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}} full">
+  <div id="infos" class="container conteudo">
+    <div class="row row-centered">
+      <div class="col-lg-3 col-centered">
+        <h2>Quando?</h2>
+        <p>{{ .Site.Params.quando | safeHTML | markdownify }}</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-5 col-centered">
+        <h2>Onde?</h2>
+        <p>{{ .Site.Params.onde | safeHTML | markdownify }}</p>
+        <a class="btn btn-default {{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}" role="button" href="https://www.google.com/maps/dir/Current+Location/{{ .Site.Params.onde_latitude }},{{ .Site.Params.onde_longitude }}" target="_blank">Ver Rota(s)</a>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3 col-centered">
+        <h2>Quanto?</h2>
+        <p>{{ .Site.Params.quanto | safeHTML | markdownify }}</p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+  var map;
+  var posicao = {lat:{{ .Site.Params.mapa_latitude }}, lng:{{ .Site.Params.mapa_longitude }}};
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('mapa'), {
+      center: posicao,
+      zoom: {{ .Site.Params.mapa_zoom }},
+      disableDefaultUI: true
+    });
+    var marker = new google.maps.Marker({
+    position: posicao,
+    map: map
+    });
+      map.setOptions({draggable: {{ .Site.Params.mapa_draggable | default "false" }}, zoomControl: {{ .Site.Params.mapa_zoomControl | default "false" }}, scrollwheel: {{ .Site.Params.mapa_scrollwheel | default "false" }}, disableDoubleClickZoom: {{ .Site.Params.mapa_disableDoubleClickZoom | default "true" }}});
+  }
+  </script>
+  <div id="mapa">
+  </div>
+</div>

@@ -1,0 +1,4 @@
+nome = "Valor Padrão ;)" #nome do tipo de ingresso
+descricao = "Valor **padrão** para os participantes" #descrição para o tipo de ingresso
+valor = "À partir de R$ 60,00" #valor para o tipo de ingresso
+link = "http://somatorio.org" #endereço para a compra desse tipo de ingresso

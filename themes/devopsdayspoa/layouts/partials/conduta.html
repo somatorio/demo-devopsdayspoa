@@ -1,0 +1,12 @@
+<div id="conduta" class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}">
+  <div class="container conteudo">
+    <h2>Código de conduta</h2>
+    <hr />
+      <h3>POLÍTICA ANTI-ASSÉDIO</h3>
+      {{ partial "antiassedio.md" . | markdownify }}
+
+      <h3>CÓDIGO DE CONDUTA</h3>
+      {{ partial "conduta.md" . | markdownify }}
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+baseURL = "http://example.org/" #por enquanto não usamos essa configuração
+languageCode = "pt-br" #por enquanto não usamos essa configuração
+title = "DevOpsDays Unicorpolis"
+theme = "devopsdayspoa"
+
+[params]
+description = "Evento de exemplo :)" #irá preencher o meta description
+slider = "enable" #qualquer coisa que não seja "enable" irá desabilitar o slider (as imagens que ficam correndo atrás do logo/nome do evento)
+slider_selector = "disable" #qualquer coisa que não seja "enable" irá desabilitar os seletores
+slider_sidecontrols = "enable" #qualquer coisa que não seja "enable" irá desabilitar os controles
+intro_image = "Gears.svg" #apenas o nome da imagem, deve estar em img/intro/
+link_c4p = "http://somatorio.org" #endereço para o form/sistema de call4papers
+
+email = "nao-existe@nao-existe.com" #email da organização do email
+twitter = "nao-existe" #para https://www.twitter.com/nao-existe colocar apenas "não-existe"
+facebook = "nao-existe" #para https://www.facebook.com/nao-existe colocar apenas "não-existe"
+
+#Os próximos 3 parametros aceitam tags html (ex: <br>) e markdown (ex: **negrito**)
+quando = "14 de Novembro<br>**Atenção: Não é um evento real! Apenas uma demonstração!**"
+onde = "Silo DevOps<br>Rua CAMS, 3464<br>ICE Ville"
+quanto = "Em **breve** mais *informações*"
+
+#latitude e longitude podem ser pegos no google maps mesmo :)
+#o mapa irá ficar centralizado nessas coordenadas E irá colocar o marcador exatamente sobre elas
+mapa_latitude = 28.3852332
+mapa_longitude = -81.5639171
+mapa_zoom = 14 #nível de zoom que será apresentado o mapa
+mapa_draggable = true #o mapa poderá ser arrastado?
+mapa_zoomControl = true #mostrar o controle de zoom?
+mapa_scrollwheel = false #a roda de rolagem do mouse deve poder alterar o zoom?
+mapa_disableDoubleClickZoom = true #vou ser sincero, não entendi o que isso faz, hahaha
+mapa_key = "" #chave na api do google, lembre de permitir o uso no google maps e afins!
+
+status_ingressos = "indisponiveis" #qualquer coisa que não seja "disponiveis" irá mostrar o aviso
+aviso_status_ingressos = "Esgotados!"
+
+status_programacao = "disponivel" #qualquer coisa que não seja "disponivel" irá mostrar o aviso
+aviso_status_programacao = "Em breve! ;)"

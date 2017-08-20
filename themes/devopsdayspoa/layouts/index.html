@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+{{ partial "menu.html" . }}
+
+{{ $.Scratch.Add "secao" 1 }}
+{{ partial "intro.html" . }}
+
+{{ $.Scratch.Add "secao" 1 }}
+{{ partial "infos.html" . }}
+
+{{ if .Site.Data.palestrantes }}
+  {{ $.Scratch.Add "secao" 1 }}
+  {{ partial "palestrantes.html" . }}
+{{ end }}
+
+{{ if .Site.Data.programacao }}
+  {{ $.Scratch.Add "secao" 1 }}
+  {{ partial "programacao.html" . }}
+{{ end }}
+
+{{ $.Scratch.Add "secao" 1 }}
+{{ partial "conduta.html" . }}
+
+{{ if .Site.Data.ingressos }}
+  {{ $.Scratch.Add "secao" 1 }}
+  {{ partial "ingressos.html" . }}
+{{ end }}
+
+{{ $.Scratch.Add "secao" 1 }}
+{{ partial "patrocinio.html" . }}
+
+{{ $.Scratch.Add "secao" 1 }}
+{{ partial "footer.html" . }}
+{{ partial "ending.html" . }}

@@ -1,0 +1,444 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+}
+
+div {
+  position: relative;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0.8;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+html,body{height:100%;}
+.carousel-inner{height:100%;}
+
+/* Carousel base class */
+.carousel {
+  height: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.carousel-caption {
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6%;
+  padding-top: 6%;
+}
+
+.carousel-caption h1 {
+  font-size: 7.2em;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 100%;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.full {
+  height: 100%;
+}
+
+.blue {
+  background-color: #0085a1;
+  color: white;
+}
+
+.blue a {
+  color: white;
+}
+
+.blue .nav>li>a:focus, .nav>li>a:hover {
+  background-color: #0063a1;
+}
+
+/*  INFOS */
+#infos {
+  font-size: 1.8em;
+  height: 45%;
+}
+
+#infos h2 {
+  font-size: 2.0em;
+}
+
+/* MAPA */
+#mapa {
+  height: 55%;
+}
+
+
+.conteudo {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  text-align: justify;
+  position: relative;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    vertical-align: top;
+    float:none;
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.foto-palestrante {
+  width: 216px;
+  height: 216px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/palestrantes/unknown-person.png);
+}
+
+.foto-palestrante img {
+  width: 100%;
+  height: 100%;
+}
+
+p.collapse, p.collapsing {
+  text-align: justify;
+}
+
+#programacao td.hora {
+  width: 40%;
+  vertical-align: middle;
+  cursor: pointer;
+  border-top: none;
+}
+
+#programacao td.evento {
+  vertical-align: middle;
+  cursor: pointer;
+  border-top: none;
+}
+
+#programacao.blue tr:hover {
+  background-color: #01579B;
+}
+
+#descricoes-palestras {
+  width: 50%;
+}
+
+.aviso {
+  z-index: 10;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.aviso h1 {
+    font-size: 10em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.em-breve {
+  filter: blur(5px);
+}
+
+.preco {
+  font-size: 1.6em;
+}
+
+div[class^="col-lg"] {
+  margin-bottom: 20px;
+  text-align: center;
+}
+div[class^="col-lg"] .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.descricao-preco {
+  height: 80px;
+}
+
+#patrocinio img {
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#patrocinio .table th {
+  text-align: center;
+}
+
+#patrocinio .table td {
+  text-align: center;
+}
+
+#patrocinio .cota {
+  background-color: #dddddd;
+  color: #000000;
+}
+
+footer {
+  padding-top: 2%;
+}
+
+footer img {
+  width: 100%;
+}
+
+.grama {
+  height: 30px;
+  height: 3vh;
+  width: 100%;
+  background-color: #44aa00;
+}
+
+.grama div {
+  height: 20px;
+  height: 2vh;
+  width: 100%;
+  background-color: #55d400;
+}
+
+footer .conteudo {
+  padding-bottom: 0;
+  padding-left: 25%;
+  color: #fff
+}
+
+.icon {
+  width: 3%;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* Kindle Fire HDX retrato */
+@media screen and (width: 1600px) and (height: 2560px) {
+  #home {
+    height: 30%;
+  }
+}
+
+/* Kindle Fire HDX paisagem */
+@media screen and (width: 2560px) and (height: 1600px) {
+  #home {
+    height: 80%;
+  }
+}
+
+/* TODO Kindle Fire HDX: alinhar as infos verticalmente */
+
+/* Nexus 7 */
+@media screen and (width: 960px) and (height: 600px) {
+  #mapa {
+    display: none;
+  }
+}
+
+/* Tablet paisagem */
+@media screen and (min-width: 800px) and (max-width: 1050px) {
+  #home {
+    height: 70%;
+  }
+}
+
+/* Ipad Pro */
+@media screen and (width: 1024px) and (height: 1366px) {
+  #home {
+    height: 40%;
+  }
+}
+
+/* Tablet retrato */
+@media screen and (min-width: 750px) and (max-width: 800px) {
+  #home {
+    margin-top: 101px;
+    height: 35%;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .aviso h1 {
+    font-size: 5em;
+  }
+  .icon {
+    width: 6%;
+  }
+  .usina {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/* Celular paisagem */
+@media screen and (max-width: 750px) {
+  #home {
+    margin-top: 51px;
+  }
+  #informacoes {
+    padding-top: 51px;
+    height: auto;
+  }
+  #infos div[class^="col-lg"] {
+    width: 100%;
+  }
+  #mapa {
+    display: none;
+  }
+  #palestrantes {
+    padding-top: 51px;
+  }
+  #descricoes-palestras {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .aviso h1 {
+    font-size: 5em;
+  }
+  .col-centered {
+      margin-right:0;
+  }
+  #programacao {
+    padding-top: 51px;
+  }
+  #conduta {
+    padding-top: 51px;
+  }
+  #patrocinio {
+    padding-top: 51px;
+  }
+  #patrocinio .platina img {
+    width: 100%;
+    height: 50%;
+  }
+
+  #patrocinio .ouro img {
+    width: 75%;
+    height: 37.5%;
+  }
+
+  #patrocinio .prata img {
+     width: 66.66%;
+     height: 33.33%;
+  }
+
+  #patrocinio .bronze img {
+     width: 50%;
+     height: 25%;
+  }
+  .icon {
+    width: 6%;
+  }
+  .usina {
+    position: absolute;
+    bottom: 0;
+  }
+  #ingressos {
+    padding-top: 51px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  #ingressos .col-lg-3 {
+    width: 50%;
+  }
+}
+
+
+/* Blackberry play retrato */
+
+@media screen and (width: 600px) {
+  #home {
+    height: 30%;
+  }
+}
+
+/* Celular retrato */
+@media screen and (max-width: 500px) {
+  #home {
+    height: 35%;
+  }
+  .carousel-caption {
+    padding-top: initial;
+    padding-bottom: initial;
+  }
+  .carousel-caption img {
+    width: 60%;
+  }
+  #infos {
+    height: 100%;
+  }
+  #infos h2 {
+    font-size: 1.5em;
+  }
+  #seja-patrocinador {
+    display: none;
+  }
+  .icon {
+    width: 9%;
+  }
+}
+
+/* iPhone 4 paisagem */
+@media screen and (width: 480px) and (height: 320px) {
+  #home {
+    height: 100%;
+  }
+}

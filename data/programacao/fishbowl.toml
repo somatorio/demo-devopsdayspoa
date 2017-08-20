@@ -1,0 +1,10 @@
+hora = "13:10 - 17:00" #hora da atividade
+atividade = "Fishbowl" #nome da atividade
+#descricao da atividade (aceita html e markdown)
+#para uma descrição em multiplas linhas, abrir e fechar o campo com 3 aspas
+#exemplo:
+#descricao = """blablabla
+#blablabla
+#blablabla"""
+descricao = "Fishbowl é um formato de discussão que permite o livre diálogo entre os participantes do evento sobre um determinado assunto, que pode ou não mudar de acordo com a evolução do diálogo.<br>[Clique aqui para maiores informações](http://agiletrendsbr.com/fishbowls/)"
+palestrante = "" #nome do palestrante

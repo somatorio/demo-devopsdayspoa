@@ -1,0 +1,48 @@
+<div id="patrocinio" class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}">
+  <div class="container conteudo">
+      <h2>Patrocinio</h2>
+      <hr />
+      <div class="text-center">
+        {{ range $element := (sort .Site.Data.patrocinio.categorias "largura" "desc") }}
+        <div class="{{.nome}}">
+          <h3>{{.nome | humanize }}</h3>
+            {{ range $.Site.Data.patrocinio.patrocinadores}}
+            {{ if eq .categoria $element.nome }}
+            <img src="img/patrocinio/{{ .imagem }}" alt="{{ .descricao | humanize }}">
+            {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+        <hr />
+        <div id="seja-patrocinador">
+          <h3>Seja um patrocinador!</h3>
+          <table class="table">
+            <tr>
+              <th>Benefícios propostos</th>
+              <th colspan="4">Grupos de parceria</th>
+            </tr>
+            <tr>
+              <th></th>
+              {{ range .Site.Data.patrocinio.categorias }}
+              <th>{{ .nome | humanize }}</th>
+              {{ end }}
+            </tr>
+            {{ range $index, $element := .Site.Data.patrocinio.beneficios }}
+            <tr>
+              <td>{{ .descricao | humanize }}</td>
+              {{ range $.Site.Data.patrocinio.categorias }}
+              <td>{{ index . $index }}</td>
+              {{ end }}
+            </tr>
+            {{ end }}
+            <tr class="cota">
+              <td>Cota de participação</td>
+              {{ range $.Site.Data.patrocinio.categorias }}
+              <td>{{ .cota }}</td>
+              {{ end }}
+            </tr>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>

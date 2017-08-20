@@ -1,0 +1,5 @@
+nome = "Rafael Gomes (Gomex)" #nome do palestrante
+empresa = "Xpto Unlimited" #empresa do palestrante
+#minibio do palestrante (aceita markdown), caso seja necessário usar aspas, escapar com \ (ex: \"isto é um exemplo \")
+minibio = "Soteropolitano, hacker urbano e consultor de infraestrutura, formado na Universidade de Salvador no curso de Gestão de Redes. Certificado em LPIC-1, MCSO e Zabbix Certified Specialist. Autor do livro \"Docker para desenvolvedores\": https://leanpub.com/dockerparadesenvolvedores"
+imagem = "rafael.jpeg" #imagem do palestrante, apenas o nome da imagem... deve estar em static/img/palestrantes

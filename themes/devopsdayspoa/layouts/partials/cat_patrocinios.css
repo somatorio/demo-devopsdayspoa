@@ -1,0 +1,6 @@
+{{ range .Site.Data.patrocinio.categorias }}
+#patrocinio .{{ .nome }} img {
+  width: {{ .largura }};
+  height: {{ .altura }};
+}
+{{ end }}

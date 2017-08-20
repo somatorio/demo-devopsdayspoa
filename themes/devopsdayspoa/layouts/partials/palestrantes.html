@@ -1,0 +1,21 @@
+<div id="palestrantes" class="{{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}">
+  <div class="container conteudo">
+    <h2>Palestrantes confirmados</h2>
+    <hr />
+    <div class="row row-centered">
+      {{ range $index, $element := .Site.Data.palestrantes}}
+      <div class="col-lg-4 col-centered palestrante{{ $index }}">
+        <div class="foto-palestrante img-circle">
+          {{ if .imagem }}
+          <img src="img/palestrantes/{{ .imagem }}">
+          {{ end }}
+        </div>
+        <h2>{{ .nome }}</h2>
+        <p>{{ .empresa }}</p>
+        <a class="btn btn-default {{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}" role="button" data-toggle="collapse" data-target=".palestrante{{ $index }} p.collapse">Mini bio &raquo;</a>
+        <p class="collapse">{{ .minibio | markdownify }}</p>
+      </div><!-- /.col-lg-4 -->
+      {{ end }}
+    </div><!-- /.row -->
+  </div>
+</div><!-- /#palestrantes -->
