@@ -19,6 +19,9 @@
           <h3>{{ .atividade }}</h3>
           {{ if .palestrante }}<p>Palestrante: {{ .palestrante }}</p>{{ end }}
           <p>{{ .descricao | safeHTML | markdownify }}</p>
+          <p>
+          {{ if .slides }} <a href="{{ .slides }}" target="_blank"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Slides</a> {{ end }}
+          {{ if .gravacao }} <a href="{{ .gravacao }}" target="_blank"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Gravação</a> {{ end }}
         </div>
         {{ end }}
       </div>

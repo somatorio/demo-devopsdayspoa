@@ -8,3 +8,5 @@ atividade = "Rodando Aplicações GUI no Docker" #nome da atividade
 #blablabla"""
 descricao = "Já roda serviços usando containers em Docker? <br>Que tal rodar também as suas aplicações GUI com ele? Isso mesmo, estou falando de rodar seu browser, editor de texto, jogos, enfim…<br>Nesta apresentação serão mostradas vantagens, desvantagens e uma demonstração de uso."
 palestrante = "Marco Antonio Martins Junior (Somatório)" #nome do palestrante
+slides = "http://somatorio.org/talks/gui-docker/" #url para os slides
+gravacao = "http://youtube.com" #url para a gravação da palestra

@@ -8,3 +8,5 @@ atividade = "Precisamos falar sobre teste automatizado de infraestrutura" #nome 
 #blablabla"""
 descricao = "Infraestrutura está virando código, e como todo código, precisa ser testada de forma automática, pois alterar o comportamento de um ambiente sem necessidade de interação manual é uma tarefa perigosa, se executada sem nenhuma checagem automatizada."
 palestrante = "Rafael Gomes (Gomex)" #nome do palestrante
+slides = "" #url para os slides
+gravacao = "" #url para a gravação da palestra

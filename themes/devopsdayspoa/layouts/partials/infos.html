@@ -8,7 +8,7 @@
       <div class="col-lg-5 col-centered">
         <h2>Onde?</h2>
         <p>{{ .Site.Params.onde | safeHTML | markdownify }}</p>
-        <a class="btn btn-default {{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}" role="button" href="https://www.google.com/maps/dir/Current+Location/{{ .Site.Params.onde_latitude }},{{ .Site.Params.onde_longitude }}" target="_blank">Ver Rota(s)</a>
+        <a class="btn btn-default {{ if (modBool ($.Scratch.Get "secao") 2) }}blue{{end}}" role="button" href="https://www.google.com/maps/dir/Current+Location/{{ .Site.Params.mapa_latitude }},{{ .Site.Params.mapa_longitude }}" target="_blank">Ver Rota(s)</a>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-3 col-centered">
         <h2>Quanto?</h2>
